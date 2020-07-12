@@ -1,4 +1,4 @@
-[Blog →](blog.md)
+[Blog →](../blog.md)
 
 ---
 
