@@ -1,4 +1,6 @@
 [Blog →](../blog.md)
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[About →](../README.md)
 
 ---
 
