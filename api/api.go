@@ -5,5 +5,6 @@ import (
 )
 
 func Route() {
-	http.HandleFunc("/", Hello)
+	http.HandleFunc("/", hello)
+	http.HandleFunc("/pixel.gif", pixel)
 }

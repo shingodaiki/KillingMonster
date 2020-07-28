@@ -5,6 +5,6 @@ import (
 	"net/http"
 )
 
-func Hello(w http.ResponseWriter, r *http.Request) {
+func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "hello, %s", r.RemoteAddr)
 }
