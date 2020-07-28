@@ -4,4 +4,3 @@ exclude:
   - api
   - go.mod
   - main.go
-api_host: mfatihmar.herokuapp.com
