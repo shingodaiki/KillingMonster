@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"os"
+
+	"mfatihmar/api"
 )
 
 func main() {
@@ -14,9 +15,7 @@ func main() {
 		port = "8080"
 	}
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "hello, %s", r.RemoteAddr)
-	})
+	api.Route()
 
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }

@@ -1,2 +1,6 @@
 name: M. Fatih Mar
 title: null
+exclude:
+  - api
+  - go.mod
+  - main.go
