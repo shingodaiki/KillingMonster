@@ -15,6 +15,13 @@ func main() {
 		port = "8080"
 	}
 
+	dbURL := os.Getenv("DATABASE_URL")
+	if dbURL == "" {
+		log.Println("$DATABASE_URL was not set, PgDB will not be available")
+	} else {
+		api.PgDB(dbURL)
+	}
+
 	api.Route()
 
 	log.Fatal(http.ListenAndServe(":"+port, nil))
