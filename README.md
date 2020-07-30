@@ -6,7 +6,7 @@ Working as Senior Network Programmer at Rocksteady Studios.
 
 Interested in Network Engineering, Distributed Systems and Game Development.
 
-![](https://mfatihmar.herokuapp.com/github-pixel.gif)
+![](https://mfatihmar.herokuapp.com/profile-pixel.gif)
 
 [Blog →](https://mfatihmar.com/blog)
 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
