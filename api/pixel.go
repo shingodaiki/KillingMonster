@@ -52,7 +52,7 @@ func pixel(sourcer string, w http.ResponseWriter, r *http.Request) {
 	address := getAddressFromReq(r)
 	browser := getBrowserFromReq(r)
 	timeutc := getTimeUTC()
-	go storePixel(sourcer, address, browser, timeutc)
+	go insertPixel(sourcer, address, browser, timeutc)
 
 	log.Println("sourcer:", sourcer)
 	log.Println("address:", getAddressFromReq(r))

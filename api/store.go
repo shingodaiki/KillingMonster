@@ -17,9 +17,9 @@ func InitStore(dbURL string) {
 	var err error
 	db, err = sql.Open("postgres", dbURL)
 	if err != nil {
-		log.Fatal("cannot open DB:", err)
+		log.Fatal("cannot open DB conn:", err)
 	}
-	log.Println("open DB OK")
+	log.Println("open DB conn OK")
 
 	db.SetMaxIdleConns(10)
 	db.SetMaxOpenConns(20) // idle + open
@@ -27,22 +27,28 @@ func InitStore(dbURL string) {
 
 	err = db.Ping()
 	if err != nil {
-		log.Fatal("cannot ping DB:", err)
+		log.Fatal("cannot ping DB conn:", err)
 	}
-	log.Println("ping DB OK")
+	log.Println("ping DB conn OK")
 
-	err = makeStore()
+	err = createPixelTable()
 	if err != nil {
-		log.Fatal("cannot make DB:", err)
+		log.Fatal("cannot create Pixel table:", err)
 	}
-	log.Println("make DB OK")
+	log.Println("create Pixel table OK")
+
+	err = createStatsTable()
+	if err != nil {
+		log.Fatal("cannot create Stats table:", err)
+	}
+	log.Println("create Stats table OK")
 }
 
 func CloseStore() {
 	db.Close()
 }
 
-func makeStore() error {
+func createPixelTable() error {
 	_, err := db.Exec(
 		`CREATE TABLE IF NOT EXISTS pixel(
 			id 		serial 			primary key,
@@ -93,7 +99,7 @@ func makeStore() error {
 	return nil
 }
 
-func storePixel(sourcer, address, browser, timeutc string) {
+func insertPixel(sourcer, address, browser, timeutc string) {
 	_, err := db.Exec(fmt.Sprintf(
 		`INSERT INTO pixel(sourcer, address, browser, timeutc)
 		VALUES('%s', '%s', '%s', '%s')`,
@@ -101,4 +107,14 @@ func storePixel(sourcer, address, browser, timeutc string) {
 	if err != nil {
 		log.Println("cannot store pixel:", err)
 	}
+}
+
+func createStatsTable() error {
+	// todo
+	return nil
+}
+
+func sumPixelStats() error {
+	// todo
+	return nil
 }
