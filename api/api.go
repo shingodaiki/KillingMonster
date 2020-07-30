@@ -1,13 +1,13 @@
 package api
 
 import (
+	"log"
 	"net/http"
 )
 
-func PgDB(url string) {
-}
-
-func Route() {
+func MapRoutes() {
 	http.HandleFunc("/", hello)
 	http.HandleFunc("/pixel.gif", pixel)
+
+	log.Println("map routes OK")
 }
