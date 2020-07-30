@@ -3,9 +3,11 @@ package api
 import (
 	"database/sql"
 	"errors"
+	"fmt"
 	"log"
 	"time"
 
+	// postgres driver
 	_ "github.com/lib/pq"
 )
 
@@ -36,6 +38,10 @@ func InitStore(dbURL string) {
 	log.Println("make DB OK")
 }
 
+func CloseStore() {
+	db.Close()
+}
+
 func makeStore() error {
 	_, err := db.Exec(
 		`CREATE TABLE IF NOT EXISTS pixel(
@@ -43,8 +49,7 @@ func makeStore() error {
 			sourcer varchar(32)		not null,
 			address varchar(48)		not null,
 			browser varchar(128)	not null,
-			timeutc varchar(64)		not null
-		)`)
+			timeutc varchar(64)		not null)`)
 	if err != nil {
 		return err
 	}
@@ -88,6 +93,12 @@ func makeStore() error {
 	return nil
 }
 
-func CloseStore() {
-	db.Close()
+func storePixel(sourcer, address, browser, timeutc string) {
+	_, err := db.Exec(fmt.Sprintf(
+		`INSERT INTO pixel(sourcer, address, browser, timeutc)
+		VALUES('%s', '%s', '%s', '%s')`,
+		sourcer, address, browser, timeutc))
+	if err != nil {
+		log.Println("cannot store pixel:", err)
+	}
 }

@@ -48,10 +48,16 @@ func getBrowserFromReq(r *http.Request) string {
 	return browser
 }
 
-func pixel(w http.ResponseWriter, r *http.Request) {
-	log.Println("timeutc:", getTimeUTC())
+func pixel(sourcer string, w http.ResponseWriter, r *http.Request) {
+	address := getAddressFromReq(r)
+	browser := getBrowserFromReq(r)
+	timeutc := getTimeUTC()
+	go storePixel(sourcer, address, browser, timeutc)
+
+	log.Println("sourcer:", sourcer)
 	log.Println("address:", getAddressFromReq(r))
 	log.Println("browser:", getBrowserFromReq(r))
+	log.Println("timeutc:", getTimeUTC())
 
 	w.Header().Set("Cache-Control", "max-age=0, no-cache, no-store, must-revalidate")
 	w.Header().Set("Pragma", "no-cache")
