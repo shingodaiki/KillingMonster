@@ -1,8 +1,12 @@
 [About →](README.md)
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[LinkedIn →](https://linkedin.com/in/mfatihmar)
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[GitHub →](https://github.com/mfatihmar)
 
----
+![](https://{{site.api_host}}/blog-pixel.gif)
 
-# Blog
+# Fatih's Netcode Blog
 
 ###### 11 July 2020
 ### [10101011, FF:FF:FF:FF:FF:FF](blog/hello-world.md)
