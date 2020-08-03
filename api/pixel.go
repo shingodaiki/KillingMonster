@@ -37,12 +37,14 @@ func getBrowserFromReq(r *http.Request) string {
 	bot := ua.Bot()
 	mobile := ua.Mobile()
 	browser, _ := ua.Browser()
-	browser = browser + " / " + os
-	if bot {
-		browser = "[BOT] " + browser
-	}
-	if mobile {
-		browser = browser + " (mobile)"
+	if browser != "github-camo" {
+		browser = browser + " / " + os
+		if bot {
+			browser = "[BOT] " + browser
+		}
+		if mobile {
+			browser = browser + " (mobile)"
+		}
 	}
 	return browser
 }
@@ -51,6 +53,9 @@ func pixel(sourcer string, w http.ResponseWriter, r *http.Request) {
 	address := getAddressFromReq(r)
 	browser := getBrowserFromReq(r)
 	timeutc := getTimeUTC()
+	if sourcer == "about" && browser == "github-camo" {
+		sourcer = "github"
+	}
 	go insertPixel(sourcer, address, browser, timeutc)
 
 	log.Println("sourcer:", sourcer)
