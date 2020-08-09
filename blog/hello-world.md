@@ -5,7 +5,7 @@
 ![](https://{{site.api_host}}/post-pixel.gif)
 
 ###### 11 July 2020
-## 10101011, FF:FF:FF:FF:FF:FF
+# 10101011, FF:FF:FF:FF:FF:FF
 
 The Open Systems Interconnection model (OSI model) is a conceptual model that characterises and standardises the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology. Its goal is the interoperability of diverse communication systems with standard communication protocols. The model partitions a communication system into abstraction layers. The original version of the model had seven layers.
 
