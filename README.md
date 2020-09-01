@@ -1,10 +1,10 @@
 ### Hello, I'm Fatih —
 
-A Network Engineering Specialist based in London, UK.
+A Game Networking Specialist based in London, UK.
 
-Working as Senior Software Engineer (Netcode) at Unity.
+Working as Senior Software Engineer (Netcode) at Unity Technologies.
 
-Interested in Network Engineering and Game Development.
+Interested in Network Engineering, Distributed Systems and Game Development.
 
 ![](https://mfatihmar.herokuapp.com/about-pixel.gif)
 
