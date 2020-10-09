@@ -1,5 +1,4 @@
-name: M. Fatih Mar
-title: null
+title: Fatih's Blog
 permalink: /:title
 exclude:
   - api

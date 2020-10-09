@@ -1,9 +1,15 @@
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$bodyFont: Helvetica, Arial, sans-serif;
+$pageWidth: 640px;
 
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
+	background: $backgroundColor;
+	color: $bodyColor;
+	font-family: $bodyFont;
+}
+
+.page {
+	margin: auto;
+	max-width: $pageWidth;
 }
