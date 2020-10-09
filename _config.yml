@@ -1,5 +1,6 @@
 name: M. Fatih Mar
 title: null
+permalink: /:title
 exclude:
   - api
   - go.mod
