@@ -1,12 +1,19 @@
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
-$bodyFont: Helvetica, Arial, sans-serif;
+$bodyFont: "Inter", sans-serif;
+$codeFont: "IBM Plex Mono", monospace;
 $pageWidth: 640px;
 
 body {
 	background: $backgroundColor;
 	color: $bodyColor;
 	font-family: $bodyFont;
+	font-size: 16px;
+}
+
+code {
+	font-family: $codeFont;
+	font-size: 14px;
 }
 
 .page {
