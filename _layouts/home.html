@@ -2,14 +2,17 @@
 layout: default
 ---
 
-<h2>You're ready to go!</h2>
-
-Start developing your Jekyll website.
-
-<hr/>
-
 {{ content }}
 
-<hr/>
+<h2>Posts</h2>
 
-<i>list of posts here</i>
+<ul>
+	{% for post in site.posts %}
+	<li>
+		<a href="{{ post.url | relative_url }}">
+			{{ post.title | escape }} ({{ post.date | date: date_format }})
+		</a>
+		<p>{{ post.excerpt }}</p>
+	</li>
+	{% endfor %}
+</ul>
