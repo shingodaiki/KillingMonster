@@ -9,11 +9,30 @@ body {
 	color: $bodyColor;
 	font-family: $bodyFont;
 	font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 
 code {
 	font-family: $codeFont;
 	font-size: 14px;
+}
+
+.navbar {
+	background: #333;
+	color: #fff;
+	padding: 16px 0;
+	font-size: 18px;
+	font-weight: bold;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+
+		&:hover {
+			color: #6bf;
+		}
+	}
 }
 
 .page {

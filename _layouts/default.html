@@ -7,13 +7,20 @@
 	<title>{{ page.title }} - {{ site.title }}</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter|IBM+Plex+Mono">
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
 </head>
 
 <body>
+	<div class="navbar">
+		<div class="page">
+			<a href="#">{{ site.title }}</a>
+			<span style="float: right;">(g) (l) (e)</span>
+		</div>
+	</div>
 	<div class="page">
 		<!-- <h1>{{ site.title }}</h1> -->
-		<br/>
-		<br/>
+		<br />
+		<br />
 		{{ content}}
 	</div>
 </body>
