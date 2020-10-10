@@ -1,5 +1,5 @@
 ---
-title: Generating GUID for Scene Components in C++
+title: Generating GUIDs for Scene Components
 layout: post
 ---
 
