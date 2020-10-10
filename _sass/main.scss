@@ -2,7 +2,11 @@ $backgroundColor: #fff;
 $bodyColor: #000000;
 $bodyFont: "Inter", sans-serif;
 $codeFont: "IBM Plex Mono", monospace;
-$pageWidth: 640px;
+$pageWidth: 720px;
+
+* {
+	box-sizing: border-box;
+}
 
 body {
 	background: $backgroundColor;
@@ -37,6 +41,7 @@ code {
 
 .page {
 	margin: auto;
+	padding: 0 16px;
 	max-width: $pageWidth;
 }
 
