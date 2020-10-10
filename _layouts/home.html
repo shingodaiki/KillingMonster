@@ -4,15 +4,17 @@ layout: default
 
 {{ content }}
 
-<h2>Articles</h2>
+<h2 class="articles">Articles</h2>
 
-<ul>
+<div class="post-list">
 	{% for post in site.posts %}
-	<li>
-		<a href="{{ post.url | relative_url }}">
-			{{ post.title | escape }} ({{ post.date | date: date_format }})
-		</a>
-		{{ post.excerpt }}
-	</li>
+	<a href="{{ post.url | relative_url }}">
+		<div class="item">
+			<!-- <div class="date"><b>#{{ post.category }}</b></div> -->
+			<div class="date">{{ post.date | date: site.date_format }}</div>
+			<h2>{{ post.title | escape }}</h2>
+			<div class="excerpt">{{ post.excerpt }}</div>
+		</div>
+	</a>
 	{% endfor %}
-</ul>
+</div>

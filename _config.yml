@@ -1,5 +1,6 @@
 title: Fatih's Blog
 permalink: /:title
+date_format: "%B %d, %Y"
 exclude:
   - api
   - go.mod

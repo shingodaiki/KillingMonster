@@ -1,4 +1,4 @@
-$backgroundColor: #ffffff;
+$backgroundColor: #fff;
 $bodyColor: #000000;
 $bodyFont: "Inter", sans-serif;
 $codeFont: "IBM Plex Mono", monospace;
@@ -19,4 +19,57 @@ code {
 .page {
 	margin: auto;
 	max-width: $pageWidth;
+}
+
+::selection {
+	background: #ffea7f;
+}
+
+.articles {
+	font-size: 32px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #d2d2d7;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+.post-list {
+	* {
+		// transition: all 0.3s;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.item {
+		margin: 64px 0;
+		padding-bottom: 16px;
+		// border-bottom: 1px solid #d2d2d7;
+
+		.date {
+			font-size: 14px;
+			color: #6e6e73;
+		}
+
+		h2 {
+			color: #1d1d1f;
+			margin-top: 8px;
+			margin-bottom: 24px;
+		}
+
+		.excerpt {
+			// padding-top: 8px;
+			color: #1d1d1f;
+			// color: #666;
+		}
+
+		&:hover {
+			h2 {
+				color: #06c;
+			}
+		}
+	}
 }
