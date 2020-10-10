@@ -10,7 +10,6 @@ layout: default
 	{% for post in site.posts %}
 	<a href="{{ post.url | relative_url }}">
 		<div class="item">
-			<!-- <div class="date"><b>#{{ post.category }}</b></div> -->
 			<div class="date">{{ post.date | date: site.date_format }}</div>
 			<h2>{{ post.title | escape }}</h2>
 			<div class="excerpt">{{ post.excerpt }}</div>

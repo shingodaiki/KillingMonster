@@ -37,6 +37,20 @@ code {
 			color: #6bf;
 		}
 	}
+
+	.icons {
+		font-size: 0;
+		float: right;
+
+		a {
+			margin-left: 16px;
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
 }
 
 .page {

@@ -1,7 +1,6 @@
 ---
 title: Generating GUID for Scene Components in C++
 layout: post
-category: unity
 ---
 
 A GameObject
