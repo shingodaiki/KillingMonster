@@ -1,4 +1,10 @@
 title: Fatih's Blog
+description: Fatih's blog on netcode, gamedev and other software engineering topics.
+social:
+  name: M. Fatih MAR
+  links:
+    - https://github.com/mfatihmar
+    - https://linkedin.com/in/mfatihmar
 permalink: /:title
 date_format: "%B %d, %Y"
 exclude:
