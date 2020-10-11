@@ -71,7 +71,7 @@ p {
 	background: #ccc;
 }
 
-#navbar {
+.navbar {
 	background: #333;
 	padding: 14px 0;
 	height: 48px;
@@ -81,12 +81,12 @@ p {
 		&:hover { color: #6bf; }
 	}
 
-	#site {
+	.site {
 		font-size: 16px;
 		line-height: 20px;
 	}
 
-	#links {
+	.links {
 		float: right;
 		a { margin-left: 16px; }
 	}
