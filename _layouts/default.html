@@ -6,27 +6,12 @@
 	<meta charset="utf-8">
 	<title>{{ page.title }} - {{ site.title }}</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600|IBM+Plex+Mono">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600|IBM+Plex+Mono:400">
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 </head>
 
 <body>
-	<div class="navbar">
-		<div class="page">
-			<a href="#">{{ site.title }}</a>
-			<span class="icons">
-				<a href="#">{% include svg/github-logo.svg %}</a>
-				<a href="#">{% include svg/linkedin-logo.svg %}</a>
-				<a href="#">{% include svg/email-at.svg %}</a>
-			</span>
-		</div>
-	</div>
-	<div class="page">
-		<!-- <h1>{{ site.title }}</h1> -->
-		<br />
-		<br />
-		{{ content}}
-	</div>
+	{{ content}}
 </body>
 
 </html>

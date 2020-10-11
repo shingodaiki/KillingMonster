@@ -1,19 +1,19 @@
 ---
-layout: default
+layout: page
 ---
 
 {{ content }}
 
-<h1 class="articles">Articles</h1>
+<h1>Articles</h1>
+<div class="separator"></div>
 
-<div class="post-list">
-	{% for post in site.posts %}
-	<a href="{{ post.url | relative_url }}">
-		<div class="item">
-			<div class="date">{{ post.date | date: site.date_format }}</div>
-			<h2>{{ post.title | escape }}</h2>
-			<div class="excerpt">{{ post.excerpt }}</div>
-		</div>
-	</a>
-	{% endfor %}
-</div>
+{% for post in site.posts %}
+<div class="spacer"></div>
+<a href="{{ post.url | relative_url }}">
+	<div class="post">
+		<div class="date">{{ post.date | date: site.date_format }}</div>
+		<h2>{{ post.title }}</h2>
+		{{ post.excerpt }}
+	</div>
+</a>
+{% endfor %}

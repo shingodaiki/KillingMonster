@@ -1,106 +1,119 @@
 $backgroundColor: #fff;
-$bodyColor: #000000;
+$bodyColor: #111;
 $bodyFont: "Inter", sans-serif;
 $codeFont: "IBM Plex Mono", monospace;
 $pageWidth: 720px;
 
 * {
+	font-size: 0;
 	box-sizing: border-box;
+	vertical-align: top;
 }
 
 body {
+	font-family: $bodyFont;
 	background: $backgroundColor;
 	color: $bodyColor;
-	font-family: $bodyFont;
-	font-size: 16px;
 	margin: 0;
 	padding: 0;
 }
 
+::selection { background: #fe0; }
+
+a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 8px;
+	margin-bottom: 16px;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
 code {
 	font-family: $codeFont;
 	font-size: 14px;
+	background: #eee;
+
+	* { font-size: 14px; }
 }
 
-.navbar {
-	background: #333;
-	color: #fff;
-	padding: 16px 0;
+p {
 	font-size: 16px;
-	// font-weight: bold;
+	line-height: 24px;
 
 	a {
-		color: #fff;
-		text-decoration: none;
+		font-size: 16px;
+		color: #06c;
 
 		&:hover {
-			color: #6bf;
-		}
-	}
-
-	.icons {
-		font-size: 0;
-		float: right;
-
-		a {
-			margin-left: 16px;
-
-			svg {
-				width: 18px;
-				height: 18px;
-			}
+			text-decoration: underline;
 		}
 	}
 }
 
-.page {
+.container {
 	margin: auto;
 	padding: 0 24px;
 	max-width: $pageWidth;
 }
 
-::selection {
-	background: #fe0;
+.spacer {
+	height: 64px;
 }
 
-h1 {
-	font-size: 32px;
-	padding-bottom: 16px;
-	border-bottom: 1px solid #d2d2d7;
+.separator {
+	height: 1px;
+	background: #ccc;
 }
 
-a {
-	text-decoration: none;
+#navbar {
+	background: #333;
+	padding: 14px 0;
+	height: 48px;
+
+	a {
+		color: #fff;
+		&:hover { color: #6bf; }
+	}
+
+	#site {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	#links {
+		float: right;
+		a { margin-left: 16px; }
+	}
 }
 
-h2 {
-	font-size: 28px;
-}
+.post {
+	color: #111;
 
-.date {
-	font-size: 14px;
-	color: #6e6e73;
-}
-
-h2 {
-	color: #1d1d1f;
-	margin-top: 8px;
-	margin-bottom: 24px;
-}
-
-.excerpt {
-	color: #1d1d1f;
-}
-
-.post-list {
-	.item {
-		margin: 64px 0;
-		padding-bottom: 16px;
-
-		&:hover {
-			h2 {
-				color: #06c;
-			}
+	&:hover {
+		h2 {
+			color: #06c;
 		}
 	}
+}
+
+.small, .date {
+	font-size: 14px;
+	color: #666;
+}
+
+.excerpt p {
+	margin: 24px 0;
+	font-size: 18px;
+}
+
+.highlight {
+	margin: 0;
+	padding: 32px;
+	background: #eee;
 }
