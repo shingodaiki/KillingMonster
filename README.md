@@ -6,5 +6,4 @@ Working as Senior Software Engineer (Netcode) at Unity Technologies.
 
 Interested in Network Engineering, Distributed Systems and Game Development.
 
-
-[Reach out on LinkedIn →](https://linkedin.com/in/mfatihmar)
+<!-- [Occasionally writing articles on my engineering blog here →](https://{{ site.blog_host }}/blog) -->

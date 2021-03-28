@@ -5,10 +5,11 @@ social:
   links:
     - https://github.com/mfatihmar
     - https://linkedin.com/in/mfatihmar
-permalink: /:title
+permalink: /blog/:title
 date_format: "%B %d, %Y"
 exclude:
   - api
   - go.mod
   - main.go
 api_host: mfatihmar.herokuapp.com
+blog_host: mfatihmar.com

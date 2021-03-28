@@ -1,10 +1,13 @@
-$backgroundColor: #fff;
+$pageColor: #fff;
 $bodyColor: #111;
+$selectColor: #fe0;
+$linkColor: #06c;
 $bodyFont: "Inter", sans-serif;
 $codeFont: "IBM Plex Mono", monospace;
 $pageWidth: 720px;
 
 * {
+	color: $bodyColor;
 	font-size: 0;
 	box-sizing: border-box;
 	vertical-align: top;
@@ -12,34 +15,57 @@ $pageWidth: 720px;
 
 body {
 	font-family: $bodyFont;
-	background: $backgroundColor;
+	background: $pageColor;
 	color: $bodyColor;
 	margin: 0;
 	padding: 0;
 }
 
-::selection { background: #fe0; }
+::selection {
+	background: $selectColor;
+}
 
-a { text-decoration: none; }
+a {
+	text-decoration: none;
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin-top: 8px;
 	margin-bottom: 16px;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 24px; }
-h3 { font-size: 18px; }
-h4 { font-size: 16px; }
-h5 { font-size: 14px; }
-h6 { font-size: 12px; }
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 12px;
+}
 
 code {
 	font-family: $codeFont;
 	font-size: 14px;
 	background: #eee;
 
-	* { font-size: 14px; }
+	* {
+		font-size: 14px;
+	}
 }
 
 p {
@@ -48,7 +74,7 @@ p {
 
 	a {
 		font-size: 16px;
-		color: #06c;
+		color: $linkColor;
 
 		&:hover {
 			text-decoration: underline;
@@ -66,49 +92,55 @@ p {
 	height: 64px;
 }
 
+.semispacer {
+	height: 32px;
+}
+
 .separator {
 	height: 1px;
 	background: #ccc;
 }
 
 .navbar {
-	background: #333;
 	padding: 14px 0;
 	height: 48px;
 
 	a {
-		color: #fff;
-		&:hover { color: #6bf; }
+		&:hover {
+			color: $linkColor;
+		}
 	}
 
 	.site {
 		font-size: 16px;
+		font-weight: bold;
 		line-height: 20px;
 	}
 
 	.links {
 		float: right;
-		a { margin-left: 16px; }
-	}
-}
-
-.post {
-	color: #111;
-
-	&:hover {
-		h2 {
-			color: #06c;
+		a {
+			margin-left: 16px;
 		}
 	}
 }
 
-.small, .date {
+.post {
+	&:hover {
+		h2 {
+			color: $linkColor;
+		}
+	}
+}
+
+.small,
+.date {
 	font-size: 14px;
 	color: #666;
 }
 
 .excerpt p {
-	margin: 24px 0;
+	margin: 24px 0 0 0;
 	font-size: 18px;
 }
 
