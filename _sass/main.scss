@@ -108,6 +108,10 @@ p {
 	a {
 		&:hover {
 			color: $linkColor;
+
+			* {
+				color: $linkColor;
+			}
 		}
 	}
 
@@ -119,6 +123,7 @@ p {
 
 	.links {
 		float: right;
+
 		a {
 			margin-left: 16px;
 		}
