@@ -29,6 +29,20 @@
             background: #fe0;
         }
 
+        @media (prefers-color-scheme: dark) {
+            * {
+                color: #fff;
+            }
+
+            body {
+                background: #000;
+            }
+
+            ::selection {
+                color: #000;
+            }
+        }
+
         h3 {
             margin-top: 8px;
             margin-bottom: 16px;
