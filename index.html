@@ -1,0 +1,58 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Fatih Mar</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👀</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600">
+    <style>
+        * {
+            color: #000;
+            font-size: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        body {
+            font-family: Inter;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        ::selection {
+            background: #fe0;
+        }
+
+        h3 {
+            margin-top: 8px;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .container {
+            margin: 64px auto;
+            padding: 0 24px;
+            max-width: 720px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% capture readme_include_capture %}{% include_relative README.md %}{% endcapture %}
+        {{ readme_include_capture | markdownify }}
+    </div>
+</body>
+
+</html>
