@@ -4,6 +4,6 @@ A Senior Software Engineer (Netcode Architect) at Unity Technologies.
 
 Interested in Network Engineering, Distributed Systems and Game Development.
 
-[![Twitter](icons/twitter.svg)](https://twitter.com/mfatihmar)
+[![Twitter](icons/twitter.svg)](https://twitter.com/ThusWroteNomad)
 [![YouTube](icons/youtube.svg)](https://youtube.com/mfatihmar)
-[![LinkedIn](icons/linkedin.svg)](https://linkedin.com/in/mfatihmar)
+[![LinkedIn](icons/linkedin.svg)](https://linkedin.com/in/ThusWroteNomad)
